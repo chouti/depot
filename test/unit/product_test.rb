@@ -10,4 +10,14 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors[:image_url].any?
     assert product.errors[:price].any?
   end
+  
+  test "product price must be positive" do
+    product = Product.new(:title        =>  "My Book Title",
+                          :description  =>  "yyy",
+                          :image_url    =>  "zzz.jpg")
+    product.price = -1
+    assert product.invalid?
+    assert_equal "must be greater than or equal to 0.01",
+      product.errors[:price].join('; ')
+  end
 end
