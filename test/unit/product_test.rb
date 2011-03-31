@@ -43,7 +43,7 @@ class ProductTest < ActiveSupport::TestCase
     ok.each do |name|
       assert new_product(name).valid?, "#{name} shouldn't be invalid"
     end
-    bac.each do |name|
+    bad.each do |name|
       assert new_product(name).invalid?, "#{name} shouldn't be valid"
     end
   end
