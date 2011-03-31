@@ -28,4 +28,11 @@ class ProductTest < ActiveSupport::TestCase
     product.price = 1
     assert product.valid?
   end
+  
+  def new_product(image_url)
+    Product.new(:title        =>  "My Book Title",
+                :description  =>  "yyy",
+                :price        =>  1,
+                :image_url    =>  image_url)
+  end
 end
