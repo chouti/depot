@@ -1,0 +1,8 @@
+cn:
+    layouts:
+        application:
+            title:                  "忙碌的书架"
+            home:                   "首页"
+            questions:              "提问"
+            news:                   "咨询"
+            contact:                "联系"
